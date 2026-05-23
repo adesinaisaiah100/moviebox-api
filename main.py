@@ -30,7 +30,7 @@ async def search_contents(
     query: str = Query(..., description="The query string to search for"),
     subject_type: int = Query(0, description="0=All, 1=Movies, 2=TV Series"),
     page: int = Query(1, description="Page number for pagination"),
-    per_page: int = Query(30, description="Items per page")
+    per_page: int = Query(20, description="Items per page")
 ):
     try:
         s_type = SubjectType(subject_type)
